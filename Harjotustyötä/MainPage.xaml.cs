@@ -22,9 +22,39 @@ namespace Harjotustyötä
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private Etana etana;
+        // game loop timer
+        private DispatcherTimer timer;
+        private double CanvasWidth;
+        private double CanvasHeight;
         public MainPage()
         {
             this.InitializeComponent();
+
+            // game loop 
+            timer = new DispatcherTimer();
+            timer.Tick += Timer_Tick;
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 1000 / 60);
+            timer.Start();
+
+            CanvasWidth = MyCanvas.Width;
+            CanvasHeight = MyCanvas.Height;
+
+            etana = new Etana
+            {
+                LocationX = CanvasWidth - 800,
+                LocationY = CanvasHeight / 100
+            };
+                
+            MyCanvas.Children.Add(etana);
         }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            etana.Move();
+            etana.UpdateLocation();
+        }
+
+
     }
 }

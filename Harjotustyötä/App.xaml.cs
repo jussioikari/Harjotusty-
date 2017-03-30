@@ -31,6 +31,7 @@ namespace Harjotustyötä
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
+        
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
