@@ -1,5 +1,5 @@
 ﻿<UserControl
-    x:Class="Harjotustyötä.Etana"
+    x:Class="Harjotustyötä.Etana2"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Harjotustyötä"
@@ -17,6 +17,5 @@
                     AlignmentY="Top">
             </ImageBrush>
         </Rectangle.Fill>
-  
     </Rectangle>
 </UserControl>

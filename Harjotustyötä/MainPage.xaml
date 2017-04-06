@@ -8,10 +8,13 @@
     mc:Ignorable="d"
     Width="1280"
     Height="720">
-    
 
-    <Grid Background="Gray">
-        <Canvas Width="800" Height="600" x:Name="MyCanvas" />
 
-    </Grid>
+    <Canvas Width="1280" Height="720" x:Name="MyCanvas">
+        <Canvas.Background>
+            <ImageBrush ImageSource="Assets/images/forest2.jpg"></ImageBrush>
+        </Canvas.Background>
+    </Canvas>
+
+
 </Page>

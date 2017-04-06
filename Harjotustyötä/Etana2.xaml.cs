@@ -17,37 +17,30 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Harjotustyötä
 {
-    public sealed partial class Etana : UserControl
+    public sealed partial class Etana2 : UserControl
     {
-        // location
-        public double LocationX { get; set; }
-        public double LocationY { get; set; }
-        private readonly double Speed = 4.0;
-        int MinLocationY = 655;
-
-
-       public Etana()
+        public double LocationXX { get; set; }
+        public double LocationYY { get; set; }
+        private readonly double Speed = 3.0;
+        int MaxLocationX = 500;
+        public Etana2()
         {
             this.InitializeComponent();
         }
-
         public void Move()
         {
-            if (LocationY < MinLocationY)
+            if (LocationXX < MaxLocationX)
 
-                LocationY += 1 + Speed * 1;
+                LocationXX += 1 + Speed * 1;
 
-            else if (LocationY > 654)
-                LocationY -= 1 + Speed * 50;
-            
+            else
+                LocationXX -= 1 + Speed * 90;
+
         }
         public void UpdateLocation()
         {
-            SetValue(Canvas.LeftProperty, LocationX);
-            SetValue(Canvas.TopProperty, LocationY);
+            SetValue(Canvas.LeftProperty, LocationXX);
+            SetValue(Canvas.TopProperty, LocationYY);
         }
     }
-
 }
-        
-

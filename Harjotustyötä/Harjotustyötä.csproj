@@ -98,6 +98,9 @@
     <Compile Include="Etana.xaml.cs">
       <DependentUpon>Etana.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Etana2.xaml.cs">
+      <DependentUpon>Etana2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -111,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\images\Etana.png" />
+    <Content Include="Assets\images\forest2.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -126,6 +130,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Etana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Etana2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

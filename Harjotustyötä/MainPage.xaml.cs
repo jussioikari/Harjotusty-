@@ -23,6 +23,7 @@ namespace Harjotustyötä
     public sealed partial class MainPage : Page
     {
         private Etana etana;
+        private Etana2 etana2;
         // game loop timer
         private DispatcherTimer timer;
         private double CanvasWidth;
@@ -42,17 +43,27 @@ namespace Harjotustyötä
 
             etana = new Etana
             {
-                LocationX = CanvasWidth - 800,
-                LocationY = CanvasHeight / 100
+                LocationX = 900,
+                LocationY = 500
             };
-                
+
+            etana2 = new Etana2
+            {
+                LocationXX = 300,
+                LocationYY = CanvasHeight - 70
+            };
+
+
             MyCanvas.Children.Add(etana);
+            MyCanvas.Children.Add(etana2);
         }
 
         private void Timer_Tick(object sender, object e)
         {
             etana.Move();
             etana.UpdateLocation();
+            etana2.Move();
+            etana2.UpdateLocation();
         }
 
 
