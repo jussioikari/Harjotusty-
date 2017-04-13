@@ -98,8 +98,8 @@
     <Compile Include="Etana.xaml.cs">
       <DependentUpon>Etana.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Etana2.xaml.cs">
-      <DependentUpon>Etana2.xaml</DependentUpon>
+    <Compile Include="Fly.xaml.cs">
+      <DependentUpon>Fly.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\images\Etana.png" />
+    <Content Include="Assets\images\fly.jpg" />
     <Content Include="Assets\images\forest2.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -133,7 +134,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Etana2.xaml">
+    <Page Include="Fly.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

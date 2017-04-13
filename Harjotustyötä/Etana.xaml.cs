@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -19,35 +20,32 @@ namespace Harjotustyötä
 {
     public sealed partial class Etana : UserControl
     {
-        // location
-        public double LocationX { get; set; }
-        public double LocationY { get; set; }
-        private readonly double Speed = 4.0;
-        int MinLocationY = 655;
-
-
-       public Etana()
+        public double StartLocationX { get; set; }
+        public double StartLocationY { get; set; }
+        private double Speed = 3.0;
+        int EndLocationXX = 500;
+        public Etana()
         {
             this.InitializeComponent();
         }
-
-        public void Move()
+        public void MoveRight()
         {
-            if (LocationY < MinLocationY)
+            StartLocationX += Speed;
 
-                LocationY += 1 + Speed * 1;
+            if (StartLocationX >= EndLocationXX || StartLocationX <= 300)
+            {
+                Speed = (-1) * Speed;
+            }
 
-            else if (LocationY > 654)
-                LocationY -= 1 + Speed * 50;
-            
         }
         public void UpdateLocation()
         {
-            SetValue(Canvas.LeftProperty, LocationX);
-            SetValue(Canvas.TopProperty, LocationY);
+            SetValue(Canvas.LeftProperty, StartLocationX);
+            SetValue(Canvas.TopProperty, StartLocationY);
         }
     }
-
 }
-        
+    
+
+
 

@@ -17,6 +17,5 @@
                     AlignmentY="Top">
             </ImageBrush>
         </Rectangle.Fill>
-  
     </Rectangle>
 </UserControl>
