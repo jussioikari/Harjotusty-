@@ -24,6 +24,7 @@ namespace Harjotustyötä
     {
         private Etana etana;
         private Fly fly;
+        private Platform platform;
         // game loop timer
         private DispatcherTimer timer;
         private double CanvasWidth;
@@ -44,7 +45,7 @@ namespace Harjotustyötä
             etana = new Etana
             {                
                 StartLocationX = 300,
-                StartLocationY = CanvasHeight - 70
+                StartLocationY = CanvasHeight - 216
             };
 
            fly = new Fly
@@ -53,9 +54,16 @@ namespace Harjotustyötä
                StartLocationYY = 500
            };
 
+            platform = new Platform
+            {
+                LocationX = 300,
+                LocationY = CanvasHeight - 170
+            };
+
 
             MyCanvas.Children.Add(etana);
-           MyCanvas.Children.Add(fly);
+            MyCanvas.Children.Add(fly);
+            MyCanvas.Children.Add(platform);
         }
 
         private void Timer_Tick(object sender, object e)
@@ -64,6 +72,7 @@ namespace Harjotustyötä
             etana.UpdateLocation();
             fly.MoveDown();
             fly.UpdateLocation();
+            platform.UpdateLocation();
         }
 
 
